@@ -1,7 +1,7 @@
 
 <div align="center">
-    <img src="https://mawrederp.com/assets/landing/images/logo.png" height="128">
-    <h2>Frappe Bench</h2>
+    <img align="center" src="https://mawrederp.com/assets/landing/images/logo.png" height="128">
+    <h2>Mawred ERP Server Specifications and Setup </h2>
 </div>
 
 
@@ -22,6 +22,33 @@ You will need a computer/server. Options include:
 
 - Linux: Debian, Ubuntu, CentOS are the preferred distros and are well tested. [Arch Linux]
 - Mac OS X
+
+### Server Specifications
+
+#### Hardware
+
+##### Minemum for 50 to ~100
+* 4 Cores, 2.8-3.0 GHz each (2.8 GHz minimum speed)
+
+* 2 GB RAM per core (8 GB)
+
+* 4 GB RAM per core for Max usage (16 GB)
+
+* Standard hard drive, 100 GB free
+
+* Network connectivity
+
+##### Minemum for 200 to ~400
+* 6 Cores, 2.8-3.0 GHz each (2.8 GHz minimum speed)
+
+* 2 GB RAM per core ( 12 GB)
+
+* 4 GB RAM per core for Max usage (24 GB)
+
+* Standard hard drive, 250 GB free or more based on file usage 
+
+* Network connectivity
+
 
 ### 1. Install Pre-requisites
 

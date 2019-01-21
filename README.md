@@ -1,18 +1,13 @@
 
 <div align="center">
-    <img src="https://github.com/frappe/design/blob/master/logos/bench-logo.svg" height="128">
+    <img src="https://mawrederp.com/assets/landing/images/logo.png" height="128">
     <h2>Frappe Bench</h2>
 </div>
 
-[![Build Status](https://circleci.com/gh/frappe/bench.svg?style=svg)](https://circleci.com/gh/frappe/bench)
 
 The bench is a command-line utility that helps you to install apps, manage multiple sites and update Frappe / ERPNext apps on */nix (CentOS, Debian, Ubuntu, etc) for development and production. Bench will also create nginx and supervisor config files, setup backups and much more.
 
 If you are using on a VPS make sure it has >= 1Gb of RAM or has swap setup properly.
-
-To do this install, you must have basic information on how Linux works and should be able to use the command-line. If you are looking easier ways to get started and evaluate ERPNext, [download the Virtual Machine](https://erpnext.com/download) or take [a free trial on erpnext.com](https://erpnext.com/pricing).
-
-If you have questions, please ask them on the [forum](https://discuss.erpnext.com/).
 
 ## Installation
 
@@ -22,18 +17,13 @@ You will need a computer/server. Options include:
 
 - A Normal Computer/VPS/Baremetal Server: This is strongly recommended. Frappe/ERPNext installs properly and works well on these
 - A Raspberry Pi, SAN Appliance, Network Router, Gaming Console, etc.: Although you may be able to install Frappe/ERPNext on specialized hardware, it is unlikely to work well and will be difficult for us to support. Strongly consider using a normal computer/VPS/baremetal server instead. **We do not support specialized hardware**.
-- A Toaster, Car, Firearm, Thermostat, etc.: Yes, many modern devices now have embedded computing capability. We live in interesting times. However, you should not install Frappe/ERPNext on these devices. Instead, install it on a normal computer/VPS/baremetal server. **We do not support installing on noncomputing devices**.
 
-To install the Frappe/ERPNext server software, you will need an operating system on your normal computer which is not Windows. Note that the command line interface does work on Windows, and you can use Frappe/ERPNext from any operating system with a web browser. However, the server software does not run on Windows. It does run on other operating systems, so choose one of these instead:
+### Operating System
 
-- Linux: Debian, Ubuntu, CentOS are the preferred distros and are well tested. [Arch Linux](https://github.com/frappe/bench/wiki/Install-ERPNext-on-ArchLinux) can also be used
+- Linux: Debian, Ubuntu, CentOS are the preferred distros and are well tested. [Arch Linux]
 - Mac OS X
 
-### Manual Install
-
-To manually install frappe/erpnext, you can follow this [this wiki](https://github.com/frappe/frappe/wiki/The-Hitchhiker's-Guide-to-Installing-Frapp%C3%A9-on-Linux-OS) for Linux and [this wiki](https://github.com/frappe/frappe/wiki/The-Hitchhiker's-Guide-to-Installing-Frapp%C3%A9-on-Mac-OS-X) for MacOS. It gives an excellent explanation about the stack. You can also follow the steps mentioned below:
-
-#### 1. Install Pre-requisites
+### 1. Install Pre-requisites
 
 - Python 2.7 [Python3.5+ also supported, but not recommended for production]
 - MariaDB 10+
@@ -144,69 +134,9 @@ For production:
 
 ---
 
-
-## Bench Manager (GUI for Bench)
-
-Bench Manager is a graphical user interface to emulate the functionalities of Frappé Bench. Like the command line utility it helps you install apps, manage multiple sites, update apps and much more.
-
-### Installation
-
-```
-$ bench setup manager
-```
-
-What all it does:
-1. Create new site bench-manager.local
-2. Gets the `bench_manager` app from https://github.com/frappe/bench_manager if it doesn't exist already
-3. Installs the bench_manager app on the site bench-manager.local
-
-## Docker Install - For Developers (beta)
-
-1. For developer setup, you can also use the official [Frappé Docker](https://github.com/frappe/frappe_docker/).
-2. The app, mariadb and redis run on individual containers
-3. This setup supports multi-tenancy and exposes the frappe-bench volume as a external storage.
-4. For more details, [read the instructions on the Frappé Docker README](https://github.com/frappe/frappe_docker/)
-
 Help
 ====
 
 For bench help, you can type
 
 	bench --help
-
-Updating
-========
-
-To manually update the bench, run `bench update` to update all the apps, run
-patches, build JS and CSS files and restart supervisor (if configured to).
-
-You can also run the parts of the bench selectively.
-
-`bench update --pull` will only pull changes in the apps
-
-`bench update --patch` will only run database migrations in the apps
-
-`bench update --build` will only build JS and CSS files for the bench
-
-`bench update --bench` will only update the bench utility (this project)
-
-`bench update --requirements` will only update dependencies (python packages) for the apps installed
-
-Guides
-=======
-- [Configuring HTTPS](https://frappe.io/docs/user/en/bench/guides/configuring-https.html)
-- [Using Let's Encrypt to setup HTTPS](https://frappe.io/docs/user/en/bench/guides/lets-encrypt-ssl-setup.html)
-- [Diagnosing the Scheduler](https://frappe.io/docs/user/en/bench/guides/diagnosing-the-scheduler.html)
-- [Change Hostname](https://frappe.io/docs/user/en/bench/guides/adding-custom-domains)
-- [Manual Setup](https://frappe.io/docs/user/en/bench/guides/manual-setup.html)
-- [Setup Production](https://frappe.io/docs/user/en/bench/guides/setup-production.html)
-- [Setup Multitenancy](https://frappe.io/docs/user/en/bench/guides/setup-multitenancy.html)
-- [Stopping Production](https://github.com/frappe/bench/wiki/Stopping-Production-and-starting-Development)
-
-
-Resources
-=======
-
-- [Background Services](https://frappe.io/docs/user/en/bench/resources/background-services.html)
-- [Bench Commands Cheat Sheet](https://frappe.io/docs/user/en/bench/resources/bench-commands-cheatsheet.html)
-- [Bench Procfile](https://frappe.io/docs/user/en/bench/resources/bench-procfile.html)
